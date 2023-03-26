@@ -1,0 +1,75 @@
+ML Project by krish -->
+1. Set up my Github repository & sync or mapping with the repository --> 
+	a. create an environment(conda create -p venv python==3.8 -y)
+	b. activate environment (conda activate D:\mlproject\venv)
+	c. initialize git repository (git init)
+	d. create a README.md file in your sys location or in git repository.
+	e. add this readme file to git hub repository
+	f. give comment (git commit -m "first commit")
+	g. push this readme.md file to git repository (git branch -M main)
+	h. add origin so that it is in sync with repository(git remote add origin https://github.com/cvanirau/mlproject.git)
+	i. push this data from origin to main-> into git hub repository(git push -u origin main)
+
+2. now repository is live. 
+	a. Create a .gitignore file (because my some of the files that need not be committed in the github that all will get removed)
+	b. we have readme file and .ignore file in my github repository, now pull this all info in visual code by (git pull)
+
+------->>>git hub repository has been created and made sync with visual code
+------------------------------------------------------------------------------
+
+
+Now set up our setup.py -->>-->>-->>-->>-->>-->>-->>-->>-->>-->>
+
+1. create setup.py -> responsible in creating my ML application as a package
+	- that package can be installed
+	- so with the help of setup.py i'll be able to build my entire ML application as a package and even deploy in pi
+	- simply building our application as a package.
+
+2. create requirements.txt file. -->will have information about all packages
+
+3. create a folder(source) inside the 'mlproject' main folder.
+	- if uou want source to be found at as a package we will create a __init__.py file inside this source folder. 
+
+	-> whenever this setup.py file packages is running it will just go and see how many folder you have this "__init__" . it will directly consider this source as a package itself and then it will try to build.
+	- once it builds right you can probably import this anywhere you like
+- our entire project developments will happens inside this __init__.py
+
+4. write code in setup.py
+	- as file was getting read after each word \n will come-> we have to replace it with blank
+
+5. install packages from requirement.txt file (pip install -r requirements.txt)
+-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>-->>
+
+-> git add .
+-> git commit -m "setup"
+-> git push -u origin main  : pushing all changes to github repository
+
+
+///////// This was basic project setup github 
+
+
+1. create folder in source named "components". after creating folder first thing create a __init__.py file.
+	- here components will be created as a package and it can also be exported to some other location as well.
+	- like DATA INGESTION: to read data from a database.
+	- DATA TRANSFORMATION
+	- Model Train
+2. create folder in source named "pipeline".
+	- first thing create a __init__.py file.
+	- traing_pipeline.py
+	- prediction.py
+3. create logger.py: 
+	- logger is for the purpose that any execution that probably happens we should be able to log all those information, the execution everything in the some files so that we will be able to track 
+4. create exception.py
+5. utils.py
+
+	exception & logger is definitely required
+
+-> to check whether logger file is running or not
+	-Run in cmd (python source/logger.py)
+
+
+
+
+
+
+
